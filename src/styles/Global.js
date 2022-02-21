@@ -12,6 +12,14 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     background-color: #0b0d17;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 15px;
+    }
   }
 
   h1, h2, h3, h4, h5, .subheading-1, .subheading-2 {
@@ -22,6 +30,10 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     font-family: 'Bellefair', serif;
     font-size: 150px;
+
+    @media (max-width: 425px) {
+      font-size: 80px;
+    }
   }
 
   h2 {
@@ -43,6 +55,15 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 28px;
     letter-spacing: 4.75px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 16px;
+      letter-spacing: 2.7px;
+    }
   }
 
   .subheading-1 {
@@ -60,6 +81,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 16px;
     letter-spacing: 2.7px;
+    color: #fff;
+    text-decoration: none;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      letter-spacing: 2.36px;
+    }
   }
 
   ul, li {
@@ -69,5 +97,6 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     background-color: unset;
+    cursor: pointer;
   }
 `;
