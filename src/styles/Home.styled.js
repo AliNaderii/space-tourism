@@ -28,11 +28,11 @@ export const StyledHome = styled.section`
 `;
 
 export const ContentContainer = styled.section`
-  height: 100%;
   width: 100%;
   display: flex;
   align-items: flex-end;
   margin-bottom: 131px;
+  margin-top: 251px;
 
 
   /* MEDIA QUERY */

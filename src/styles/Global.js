@@ -99,4 +99,8 @@ export const GlobalStyle = createGlobalStyle`
     background-color: unset;
     cursor: pointer;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
