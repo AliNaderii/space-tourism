@@ -8,11 +8,12 @@ export const Container = styled.div`
   height: 100vh;
   background: url(${DesktopBackground}) no-repeat fixed center;
   background-size: cover;
-  overflow: auto;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     background: url(${TabletBackground}) no-repeat fixed center;
     background-size: cover;
+    overflow: auto;
   }
 
   @media (max-width: 425px) {
@@ -88,7 +89,6 @@ export const ImageSection = styled.section`
 
 // DESCRIPTION SECTION
 export const Description = styled.section`
-  margin-bottom: 94px;
 
   @media (max-width: 768px) {
     margin-bottom: 40px;

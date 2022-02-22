@@ -15,7 +15,8 @@ export const StyledTitle = styled.h5`
     margin-left: 39px;
   }
 
-  @media (max-width: 768px) {
-    margin: 0 auto;
+  @media (max-width: 425px) {
+    text-align: center;
+    margin: 24px 0 32px;
   }
 `;
