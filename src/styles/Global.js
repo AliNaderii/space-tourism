@@ -44,11 +44,27 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     font-family: 'Bellefair', serif;
     font-size: 56px;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 24px;
+    }
   }
 
   h4 {
     font-family: 'Bellefair', serif;
     font-size: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 16px;
+    }
   }
 
   h5 {

@@ -10,17 +10,6 @@ export const Container = styled.div`
   background-size: cover;
   overflow: hidden;
 
-  h5 {
-    margin-top: 76px;
-    margin-left: 166px;
-
-    span {
-      margin-right: 28px;
-      opacity: 0.25;
-      font-weight: bold;
-    }
-  }
-
   /* MEDIA QUERY */
 
   @media (max-width: 768px) {
@@ -28,21 +17,12 @@ export const Container = styled.div`
     background: url(${TabletBackround}) no-repeat fixed center;
     background-size: cover;
     text-align: center;
-
-    h5 {
-      margin-top: 40px;
-      margin-left: 39px;
-    }
   }
 
   @media (max-width: 425px) {
     padding: 0 0 58px 0px;
     background: url(${MobileBackround}) no-repeat fixed center;
     background-size: cover;
-
-    h5 {
-      margin: 0 auto;
-    }
   }
 `;
 

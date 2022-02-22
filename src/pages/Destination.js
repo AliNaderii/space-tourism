@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Container, ContentContainer, Description, Tabs, Info } from '../styles/Destination.styled';
 // COMPORNENTS
 import Navbar from '../components/Navbar';
+import Title from '../components/Title';
 // IMAGES
 import Moon from '../assets/destination/image-moon.png';
 
@@ -11,7 +12,7 @@ export default function Destination() {
   return (
     <Container>
       <Navbar />
-      <h5><span>01</span> PICK YOUR DESTINATION</h5>
+      <Title text='PICK YOUR DESTINATION' num='01' />
       <ContentContainer>
         <img src={ Moon } alt="Moon" />
         <Description>
