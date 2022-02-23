@@ -1,21 +1,18 @@
 import styled from "styled-components";
-import DesktopBackground from '../assets/technology/background-technology-desktop.jpg';
-import TabletBackground from '../assets/technology/background-technology-tablet.jpg';
-import MobileBackground from '../assets/technology/background-technology-desktop.jpg';
 
 export const Container = styled.div`
   height: 100vh;
-  background: url(${DesktopBackground}) no-repeat fixed center;
+  background: url('/assets/technology/background-technology-desktop.jpg') no-repeat fixed center;
   background-size: cover;
   overflow: auto;
 
-  @media (max-width: 768px) {
-    background: url(${TabletBackground}) no-repeat fixed center;
+  @media (max-width: 1200px) {
+    background: url('/assets/technology/background-technology-tablet.jpg') no-repeat fixed center;
     background-size: cover;
   }
 
-  @media (max-width: 768px) {
-    background: url(${MobileBackground}) no-repeat fixed center;
+  @media (max-width: 1200px) {
+    background: url('/assets/technology/background-technology-mobile.jpg') no-repeat fixed center;
     background-size: cover;
   }
 `;
@@ -26,7 +23,7 @@ export const ContentContainer = styled.section`
   align-items: center;
   margin-top: 26px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     margin-bottom: 97px;
 
@@ -34,7 +31,7 @@ export const ContentContainer = styled.section`
       order: 1;
       margin-top: 60px;
       margin-bottom: 56px;
-      width: 100%;
+      width: 100vw;
     }
   }
 
@@ -46,7 +43,6 @@ export const ContentContainer = styled.section`
       height: 170px;
       margin-top: 0;
       margin-bottom: 34px;
-      width: 100%;
     }
   }
 `;
@@ -71,13 +67,17 @@ export const Tabs = styled.div`
     color: #fff;
   }
 
+  a:hover {
+    border: 1px solid #fff;
+  }
+
   a.active {
     background-color: #fff;
     color: ${({ theme }) => theme.colors['Cinder']};
     border: 1px solid ${({ theme }) => theme.colors['Cinder']};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     flex-direction: row;
     gap: 16px;
     justify-content: center;
@@ -117,7 +117,7 @@ export const Description = styled.article`
     line-height: 32px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     order: 3;
     text-align: center;
     margin: 44px 155px 0;

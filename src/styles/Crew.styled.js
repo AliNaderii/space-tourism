@@ -1,23 +1,19 @@
 import styled from 'styled-components';
-import DesktopBackground from '../assets/crew/background-crew-desktop.jpg';
-import TabletBackground from '../assets/crew/background-crew-tablet.jpg';
-import MobileBackground from '../assets/crew/background-crew-mobile.jpg';
 
 // CONTAIENER
 export const Container = styled.div`
   height: 100vh;
-  background: url(${DesktopBackground}) no-repeat fixed center;
+  background: url('/assets/crew/background-crew-desktop.jpg') no-repeat fixed center;
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
 
-  @media (max-width: 768px) {
-    background: url(${TabletBackground}) no-repeat fixed center;
+  @media (max-width: 1200px) {
+    background: url('/assets/crew/background-crew-tablet.jpg') no-repeat fixed center;
     background-size: cover;
-    overflow: auto;
   }
 
-  @media (max-width: 425px) {
-    background: url(${MobileBackground}) no-repeat fixed center;
+  @media (max-width: 768px) {
+    background: url('/assets/crew/background-crew-mobile.jpg') no-repeat fixed center;
     background-size: cover;
   }
 `;
@@ -26,16 +22,15 @@ export const Container = styled.div`
 // CONTENT CONTAINER
 export const ContentContainer = styled.section`
   display: flex;
-  gap: 81px;
-  
-  @media (max-width: 768px) {
+
+  @media (max-width: 1200px) {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
     gap: 0;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     justify-content: center;
     margin-top: 0;
   }
@@ -45,19 +40,18 @@ export const ContentContainer = styled.section`
 // IMAGE SECTION
 export const ImageSection = styled.section`
   display: flex;
+  margin-top: 62px;
+  margin-right: 130px;
   justify-content: center;
-  align-items: center;
+  flex-grow: 2;
 
   h5 {
     display: none;
   }
 
-  img {
-    margin-top: 62px;
-    margin-right: 137px;
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
+    margin-right: 0;
+    
     img {
       margin-top: 0;
       margin-right: 0;
@@ -67,14 +61,15 @@ export const ImageSection = styled.section`
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
+    margin-top: 0;
     order: 1;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 
     h5 {
       display: block;
-      text-align: center;
+      margin: 32px auto 0;
     }
 
     img {
@@ -90,7 +85,7 @@ export const ImageSection = styled.section`
 // DESCRIPTION SECTION
 export const Description = styled.section`
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin-bottom: 40px;
 
     h5 {
@@ -98,7 +93,8 @@ export const Description = styled.section`
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
+    margin-bottom: 0;
     order: 2;
     display: flex;
     flex-direction: column;
@@ -127,9 +123,10 @@ export const Info = styled.article`
   p {
     color: ${({ theme }) => theme.colors['Fog']};
     line-height: 32px;
+    width: 80%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin: 60px 155px 40px;
     justify-content: center;
     text-align: center;
@@ -140,10 +137,12 @@ export const Info = styled.article`
 
     p {
       line-height: 28px;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     order: 2;
     margin: 0 24px 104px;
 
@@ -168,11 +167,15 @@ export const Tabs = styled.div`
     opacity: 0.17;
   }
 
+  a:hover {
+    opacity: 0.5;
+  }
+
   a.active {
     opacity: 1;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin: 40px auto 0;
     justify-content: center;
 
@@ -182,7 +185,7 @@ export const Tabs = styled.div`
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     order: 1;
     margin: 0 auto 32px;
   }

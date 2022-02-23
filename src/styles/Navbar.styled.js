@@ -8,7 +8,7 @@ export const StyledNavbar = styled.div`
   grid-template-columns: 2fr 3fr;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin-top: 0;
     grid-template-columns: 1fr 1fr;
     padding-left: 39px;
@@ -30,7 +30,7 @@ export const Logo = styled.div`
 
   /* MEDIA QUERY */
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
 
     .line {
       display: none;
@@ -64,17 +64,31 @@ export const Links = styled.nav`
     margin-right: 11px;
   }
 
-  a.active {
+  a {
     height: 100%;
     display: flex;
     align-items: center;
+  }
+
+  a:hover {
+    color: ${({ theme }) => theme.colors['Fog']};
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
     margin-top: 3px;
+  }
+
+  a.active {
     border-bottom: 3px solid #fff;
+    margin-top: 3px;
+  }
+
+  .active {
+    border-bottom: 3px solid #fff;
+    margin-top: 3px;
   }
 
   /* MEDIA QUERY */
   
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     padding: 0 27px;
 
     grid-template-columns: repeat(4, 100px);
@@ -84,7 +98,7 @@ export const Links = styled.nav`
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 570px) {
     display: none;
   }
 `;
@@ -92,10 +106,36 @@ export const Links = styled.nav`
 export const HamburgerButton = styled.button`
   display: none;
 
-  @media (max-width: 425px) {
+  @media (max-width: 570px) {
     display: block;
     position: absolute;
     top: 33px;
     right: 24px;
+  }
+`;
+
+export const SideMenu = styled.aside`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 60%;
+  padding: 118px 95px 0 32px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+
+  span {
+    font-weight: 700;
+    margin-right: 11px;
+  }
+
+  button {
+    position: absolute;
+    top: 34px;
+    right: 27px;
   }
 `;

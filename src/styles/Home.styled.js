@@ -1,28 +1,23 @@
 import styled from 'styled-components';
-import HomeBackground from '../assets/home/background-home-desktop.jpg';
-import TabletBackground from '../assets/home/background-home-tablet.jpg';
-import MobileBackground from '../assets/home/background-home-mobile.jpg';
 
 export const StyledHome = styled.section`
   height: 100vh;
-  background: url(${HomeBackground}) no-repeat fixed center;
+  background: url('/assets/home/background-home-desktop.jpg') no-repeat fixed center;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
+  overflow: auto;
 
   /* MEDIA QUERY */
 
-  @media (max-width: 768px) {
-    align-items: center;
-    justify-content: space-between;
-    background: url(${TabletBackground}) no-repeat fixed center;
+  @media (max-width: 1200px) {
+    background: url('/assets/home/background-home-tablet.jpg') no-repeat fixed center;
     background-size: cover;
   }
 
   @media (max-width: 425px) {
-    align-items: center;
-    justify-content: space-between;
-    background: url(${MobileBackground}) no-repeat fixed center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('/assets/home/background-home-mobile.jpg') no-repeat fixed center;
     background-size: cover;
   }
 `;
@@ -34,21 +29,61 @@ export const ContentContainer = styled.section`
   margin-bottom: 131px;
   margin-top: 251px;
 
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 274px;
+    height: 274px;
+    margin-right: 165px;
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: #fff;
+    color: ${({ theme }) => theme.colors['Cinder']};
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    
+    &:hover {
+      outline: 100px solid rgba(255, 255, 255, 0.1);
+    }
+  } 
 
   /* MEDIA QUERY */
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: fit-content;
     margin-bottom: 90px;
+    margin-top: 106px;
     gap: 90px;
+
+    a {
+      width: 242px;
+      height: 242px;
+      margin: 0 auto;
+
+      &:hover {
+      outline: 65px solid rgba(255, 255, 255, 0.1);
+    }
+    }
   }
 
   @media (max-width: 425px) {
-    gap: 81px;
+    flex-direction: column;
     margin-bottom: 48px;
+    margin-top: 0;
+    height: 100%;
+
+    a {
+      width: 150px;
+      height: 150px;
+      font-size: 20px;
+      letter-spacing: 1.25px;
+    }
   }
 `;
 
@@ -72,7 +107,7 @@ export const Content = styled.div`
 
   /* MEDIA QUERY */
   
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin-left: 0;
     text-align: center;
   }
@@ -85,37 +120,7 @@ export const Content = styled.div`
     }
 
     h5 {
-      margin-top: 112px;
+      margin-top: 45px;
     }
-  }
-`;
-
-export const Button = styled.button`
-  width: 274px;
-  height: 274px;
-  margin-right: 165px;
-  margin-left: auto;
-  border-radius: 50%;
-  background-color: #fff;
-  color: ${({ theme }) => theme.colors['Cinder']};
-  font-family: Bellefair;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  letter-spacing: 2px;
-  cursor: pointer;
-
-  /* MEDIA QUERY */
-  @media (max-width: 768px) {
-    width: 242px;
-    height: 242px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 425px) {
-    width: 150px;
-    height: 150px;
-    font-size: 20px;
-    letter-spacing: 1.25px;
   }
 `;

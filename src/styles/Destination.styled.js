@@ -1,27 +1,24 @@
 import styled from "styled-components";
-import DesktopBackround from '../assets/destination/background-destination-desktop.jpg';
-import TabletBackround from '../assets/destination/background-destination-tablet.jpg';
-import MobileBackround from '../assets/destination/background-destination-mobile.jpg';
 
 export const Container = styled.div`
   height: 100vh;
   padding: 0 0 112px 0px;
-  background: url(${DesktopBackround}) no-repeat fixed center;
+  background: url('/assets/destination/background-destination-desktop.jpg') no-repeat fixed center;
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
 
   /* MEDIA QUERY */
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     padding: 0 0 62px 0px;
-    background: url(${TabletBackround}) no-repeat fixed center;
+    background: url('/assets/destination/background-destination-tablet.jpg') no-repeat fixed center;
     background-size: cover;
     text-align: center;
   }
 
   @media (max-width: 425px) {
     padding: 0 0 58px 0px;
-    background: url(${MobileBackround}) no-repeat fixed center;
+    background: url('/assets/destination/background-destination-mobile.jpg') no-repeat fixed center;
     background-size: cover;
   }
 `;
@@ -30,7 +27,7 @@ export const ContentContainer = styled.section`
   margin: 64px 163px 0 230px;
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     margin: 60px 98px 62px;
     align-items: center;
@@ -65,7 +62,7 @@ export const Description = styled.article`
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin: 53px auto 0;
     text-align: center;
 
@@ -104,12 +101,17 @@ export const Tabs = styled.ul`
     letter-spacing: 2.7px;
   }
 
+  a:hover {
+    color: ${({ theme }) => theme.colors['Fog']};
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  }
+
   a.active {
     border-bottom: 3px solid #fff;
     padding-bottom: 11px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     justify-content: center;
   }
 
@@ -133,12 +135,12 @@ export const Info = styled.div`
     color: #fff;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin-top: 49px;
     justify-content: center;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin-top: 32px;
     flex-direction: column;
     padding-top: 32px;

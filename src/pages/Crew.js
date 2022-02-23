@@ -1,14 +1,18 @@
 // TOOLS
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 // STYLES
 import { Container, ContentContainer, Description, Info, Tabs, ImageSection } from '../styles/Crew.styled';
 // COMPONENTS
 import Navbar from '../components/Navbar';
 import Title from '../components/Title';
-// IMAGE
-import Image from '../assets/crew/image-douglas-hurley.png';
+// DATA
+import data from '../data.json';
 
 export default function Crew() {
+  const name = useParams().name;
+  const crew = data.crew.filter(
+    member => member.name.toLowerCase() === name.replace('-', ' ')
+  );
   return (
     <Container>
       <Navbar />
@@ -18,21 +22,21 @@ export default function Crew() {
         <Description>
           <Title text='MEET YOUR CREW' num='02' />
           <Info>
-            <h4>COMMANDER</h4>
-            <h3>Douglas Hurley</h3>
-            <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+            <h4>{ crew[0].role }</h4>
+            <h3>{ crew[0].name }</h3>
+            <p>{ crew[0].bio }</p>
           </Info>
           <Tabs>
-            <NavLink to='/crew'></NavLink>
-            <NavLink to='/'></NavLink>
-            <NavLink to='/'></NavLink>
-            <NavLink to='/'></NavLink>
+            <NavLink to='/crew/douglas-hurley'></NavLink>
+            <NavLink to='/crew/mark-shuttleworth'></NavLink>
+            <NavLink to='/crew/victor-glover'></NavLink>
+            <NavLink to='/crew/anousheh-ansari'></NavLink>
           </Tabs>
         </Description>
 
         <ImageSection>
           <Title text='MEET YOUR CREW' num='02' />
-          <img src={ Image } alt="crew" />
+          <img src={ crew[0].images.png } alt="crew" />
         </ImageSection>
 
       </ContentContainer>

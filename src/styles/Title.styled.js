@@ -10,9 +10,9 @@ export const StyledTitle = styled.h5`
     font-weight: bold;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     margin-top: 40px;
-    margin-left: 39px;
+    margin-left: 50px;
   }
 
   @media (max-width: 425px) {
