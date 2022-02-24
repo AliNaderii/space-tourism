@@ -23,14 +23,16 @@ function App() {
   return (
     <ThemeProvider theme={ theme }>
       <GlobalStyle />
-      <Router>
-        <Routes>
-          <Route path='/' element={ <Home /> } />
-          <Route path='/destination/:name' element={ <Destination /> } />
-          <Route path='/crew/:name' element={ <Crew /> } />
-          <Route path='/technology/:name' element={ <Technology /> } />
-        </Routes>
-      </Router>
+      <main>
+        <Router>
+          <Routes>
+            <Route path='/' element={ <Home /> } />
+            <Route path='/destination/:name' element={ <Destination /> } />
+            <Route path='/crew/:name' element={ <Crew /> } />
+            <Route path='/technology/:name' element={ <Technology /> } />
+          </Routes>
+        </Router>
+      </main>
     </ThemeProvider>
   );
 }
